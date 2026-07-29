@@ -1615,7 +1615,7 @@ p:last-child {
     --h3-size: 1.9rem;
   }
 
-  .outputs-numbered {
+  .outputs-list {
     columns: 1;
   }
 
@@ -1921,47 +1921,47 @@ p:last-child {
   margin-bottom: 1.25rem;
 }
 
-/* Two-column numbered list with large teal index numbers.
-   CSS multicolumn flows items down each column (01-03 | 04-06). */
-.outputs-numbered {
+/* Two-column bulleted list with colored bullets.
+   CSS multicolumn flows items down each column (items 1-3 | 4-6). */
+.outputs-list {
   list-style: none;
   padding: 0;
   margin: 0 0 2.5rem 0;
   columns: 2;
   column-gap: 64px;
-  counter-reset: output;
 }
 
-.outputs-numbered li {
+.outputs-list li {
   break-inside: avoid;
   display: flex;
   align-items: baseline;
-  gap: 1rem;
+  gap: 0.7rem;
   padding: 0.65rem 0;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   font-size: 0.95rem;
   line-height: 1.5;
   color: var(--text);
-  counter-increment: output;
 }
 
-.outputs-numbered li::before {
-  content: counter(output, decimal-leading-zero);
-  font-family: var(--font-head);
-  font-size: 1.6rem;
-  font-weight: 600;
+/* Bullets, not numbers: the list is a set of output kinds, not a count of them.
+   Gutter is narrower than the old numbered version — a single dot needs far
+   less room than two digits, and a wide gap orphans it from its text. */
+.outputs-list li::before {
+  content: "\2022";
+  font-size: 1.5rem;
   line-height: 1;
   color: var(--logo-teal);
   flex-shrink: 0;
-  min-width: 1.6rem;
+  min-width: 0.7rem;
+  text-align: center;
 }
 
-/* Each index number takes a different logo color, cycling the palette */
-.outputs-numbered li:nth-child(5n+1)::before { color: var(--logo-green); }
-.outputs-numbered li:nth-child(5n+2)::before { color: var(--logo-gold); }
-.outputs-numbered li:nth-child(5n+3)::before { color: var(--logo-purple); }
-.outputs-numbered li:nth-child(5n+4)::before { color: var(--logo-red); }
-.outputs-numbered li:nth-child(5n+5)::before { color: var(--logo-teal); }
+/* Each bullet takes a different logo color, cycling the palette */
+.outputs-list li:nth-child(5n+1)::before { color: var(--logo-green); }
+.outputs-list li:nth-child(5n+2)::before { color: var(--logo-gold); }
+.outputs-list li:nth-child(5n+3)::before { color: var(--logo-purple); }
+.outputs-list li:nth-child(5n+4)::before { color: var(--logo-red); }
+.outputs-list li:nth-child(5n+5)::before { color: var(--logo-teal); }
 
 /* ============================================================
    FUNDING
