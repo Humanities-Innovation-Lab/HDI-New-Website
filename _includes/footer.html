@@ -2,13 +2,13 @@
   <div class="footer__inner">
     <p class="footer__copy">&copy; 2026 Humanities Data Inquiry. All Rights Reserved.</p>
 
-    <a class="footer__brand" href="/hdi-demo-personal/" aria-label="Humanities Data Inquiry home">
-      <img src="/hdi-demo-personal/assets/img/logo.png" alt="Humanities Data Inquiry logo">
+    <a class="footer__brand" href="{{ site.baseurl }}/" aria-label="Humanities Data Inquiry home">
+      <img src="{{ site.baseurl }}/assets/img/logo.png" alt="Humanities Data Inquiry logo">
     </a>
 
     <nav class="footer__links">
       {% unless page.url == '/contact/' %}
-        <a href="/hdi-demo-personal/contact/">Contact</a>
+        <a href="{{ site.baseurl }}/contact/">Contact</a>
       {% endunless %}
     </nav>
   </div>
