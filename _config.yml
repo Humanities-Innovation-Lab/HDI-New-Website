@@ -3,8 +3,8 @@ email: nathan.woods@uleth.ca
 description: >-
   Website of the Humanities Data Inquiry Project, hosted by the University of Lethbridge Humanities Innovation Lab.
 
-baseurl: "/HDI-New-Website"
-url: "https://tessabordalejo.github.io"
+baseurl: ""
+url: "https://humanitiesdatainquiry.org"
 
 github_username: tessabordalejo
 
